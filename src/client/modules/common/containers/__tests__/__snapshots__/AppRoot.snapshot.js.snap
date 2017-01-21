@@ -1,0 +1,23 @@
+exports[`AppRoot should render 1`] = `
+<div>
+  yoyo
+  <div>
+     
+     
+  </div>
+  <div
+    style={
+      Object {
+        "bottom": 10,
+        "color": "white",
+        "fontSize": 10,
+        "left": 10,
+        "position": "fixed",
+        "zIndex": 1500,
+      }
+    }>
+    ver. 0.5.0
+     (8658096)
+  </div>
+</div>
+`;

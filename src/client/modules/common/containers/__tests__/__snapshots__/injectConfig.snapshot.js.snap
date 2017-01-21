@@ -1,0 +1,5 @@
+exports[`injectConfig should render 1`] = `
+<div>
+   a component for testing 
+</div>
+`;
