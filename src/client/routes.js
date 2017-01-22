@@ -3,6 +3,7 @@ import { Route, IndexRoute } from 'react-router';
 import AppRoot from '~/modules/common/containers/AppRoot';
 import Main from '~/modules/common/containers/MainPage';
 import CreditsPage from '~/modules/common/containers/CreditsPage';
+import InterviewPage from '~/modules/common/containers/InterviewPage';
 import NotFoundPage from '~/modules/common/containers/NotFoundPage';
 
 import injectConfiguration from '~/modules/common/containers/injectConfig';
@@ -14,6 +15,7 @@ export default (
     <IndexRoute component={ Main } />
 
     <Route component={ CreditsPage } path={c.pages.credits.slug } />
+    <Route component={ InterviewPage } path={c.pages.interview.slug } />
 
     <Route component={ NotFoundPage } path="*" />
   </Route>
