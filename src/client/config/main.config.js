@@ -1,7 +1,7 @@
 export default {
   pages: {
     main: {
-      title: 'Main Page',
+      title: 'Landing Page',
       slug: '/'
     },
     interview: {
