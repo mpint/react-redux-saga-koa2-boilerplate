@@ -1,16 +1,14 @@
 import React, { PropTypes, Component } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { actions } from '~/modules/common/state/common.ducks';
-import { textCenterStyle, uppercaseStyle } from '~/styles/inline';
+
 import GavelIcon from 'material-ui/svg-icons/action/gavel';
 import GithubIcon from 'material-ui/svg-icons/action/gavel';
-
 import TextComponent from '~/modules/common/components/TextComponent';
 
+import { textCenterStyle, uppercaseStyle } from '~/styles/inline';
+
 class CreditsPage extends Component {
-  constructor(props, context) {
-    super(props, context);
+  constructor() {
+    super();
   }
 
   render () {
@@ -23,7 +21,6 @@ class CreditsPage extends Component {
 
     return (
       <div style={ { ...verticalCenterStyle, ...textCenterStyle } }>
-
         <h2 style={ uppercaseStyle }> Brought to you by...</h2>
 
         <TextComponent
@@ -46,7 +43,7 @@ class CreditsPage extends Component {
         <br />
 
         <TextComponent
-          content={ 'And last but not least...' } />
+          content={ 'And as usual...' } />
 
         <br />
 
@@ -73,29 +70,9 @@ class CreditsPage extends Component {
   }
 }
 
-CreditsPage.propTypes = {
-  actions: PropTypes.object.isRequired,
-  commonState: PropTypes.object.isRequired
-};
-
 CreditsPage.contextTypes = {
   config: PropTypes.object.isRequired,
   viewportHeight: PropTypes.number.isRequired
 };
 
-function mapStateToProps(state) {
-  return {
-    commonState: state.commonAppState
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    actions: bindActionCreators(actions, dispatch)
-  };
-}
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(CreditsPage);
+export default CreditsPage;

@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import { connect } from 'react-redux';
 import config from '~/config/main.config';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import muiThemeFile from '~/styles/muiTheme';
@@ -22,7 +21,7 @@ function injectConfiguration(BaseComponent) {
     }
   }
 
-  return connect()(ConfiguredComponent);
+  return ConfiguredComponent;
 }
 
 export default injectConfiguration;

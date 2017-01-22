@@ -1,13 +1,12 @@
 import React, { PropTypes, Component } from 'react';
-import { bindActionCreators } from 'redux';
 import { revisionStyles } from '~/styles/inline';
-import { getLocalStorageItem, setLocalStorageItem } from '~/modules/common/state/localStorage';
+import { setLocalStorageItem } from '~/modules/common/state/localStorage';
 import { version, commit } from '../../../../../.revision';
 import MenuList from '~/modules/common/components/MenuList';
 
 class AppRoot extends Component {
-  constructor(props, context) {
-    super(props, context);
+  constructor() {
+    super();
 
     this.state = {
       viewportWidth: window.innerWidth,

@@ -4,11 +4,20 @@ import { bindActionCreators } from 'redux';
 import { actions } from '~/modules/common/state/common.ducks';
 import { textCenterStyle } from '~/styles/inline';
 
+import FlatButton from 'material-ui/FlatButton'
 import TextComponent from '~/modules/common/components/TextComponent';
 
 class MainPage extends Component {
   constructor(props, context) {
     super(props, context);
+
+    this.state = { counter: 0 };
+  }
+
+  increment = (e) => {
+    this.setState(
+      { counter: ++this.state.counter }
+    );
   }
 
   render () {
@@ -22,6 +31,13 @@ class MainPage extends Component {
 
         <TextComponent
           content={ 'Jacked up and good to go...' } />
+
+        <br/>
+
+        <TextComponent
+          content={ this.state.counter || 0 } />
+
+        <FlatButton onClick={ this.increment } label={ 'go up' } />
       </div>
     );
   }
