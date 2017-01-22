@@ -39,4 +39,22 @@ describe('Common sagas', () => {
     });
   });
 
+  describe('watchIncrementCounterSaga', () => {
+    it(`increments the counter`, () => {
+      const saga = m.watchIncrementCounterSaga();
+
+      expect(
+        nextValue(saga)
+      ).toEqual(
+        take(actions.incrementCounterSaga().type)
+      );
+
+      expect(
+        nextValue(saga)
+      ).toEqual(
+        put(actions.incrementCounter())
+      );
+    });
+  });
+
 });

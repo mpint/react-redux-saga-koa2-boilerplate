@@ -10,14 +10,6 @@ import TextComponent from '~/modules/common/components/TextComponent';
 class MainPage extends Component {
   constructor(props, context) {
     super(props, context);
-
-    this.state = { counter: 0 };
-  }
-
-  increment = (e) => {
-    this.setState(
-      { counter: ++this.state.counter }
-    );
   }
 
   render () {
@@ -35,9 +27,11 @@ class MainPage extends Component {
         <br/>
 
         <TextComponent
-          content={ this.state.counter || 0 } />
+          content={ this.props.commonState.counter } />
 
-        <FlatButton onClick={ this.increment } label={ 'go up' } />
+        <FlatButton
+          onClick={ this.props.actions.incrementCounterSaga }
+          label={ 'go up' } />
       </div>
     );
   }
