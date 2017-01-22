@@ -24,7 +24,7 @@ class CreditsPage extends Component {
     return (
       <div style={ { ...verticalCenterStyle, ...textCenterStyle } }>
 
-        <h2 style={ uppercaseStyle }> Brought to you by... </h2>
+        <h2 style={ uppercaseStyle }> Brought to you by...</h2>
 
         <TextComponent
           content={ 'A heavily modified version of...' } />

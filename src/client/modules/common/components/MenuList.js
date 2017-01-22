@@ -21,7 +21,7 @@ const MenuList = (props) => {
 };
 
 MenuList.propTypes = {
-  children: PropTypes.element
+  pageConfig: PropTypes.object.isRequired
 };
 
 export default MenuList;

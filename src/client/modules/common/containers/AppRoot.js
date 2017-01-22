@@ -1,5 +1,4 @@
 import React, { PropTypes, Component } from 'react';
-import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { revisionStyles } from '~/styles/inline';
 import { getLocalStorageItem, setLocalStorageItem } from '~/modules/common/state/localStorage';
@@ -72,8 +71,7 @@ class AppRoot extends Component {
 
 AppRoot.contextTypes = {
   muiTheme: PropTypes.object.isRequired,
-  config: PropTypes.object.isRequired,
-  router: PropTypes.object.isRequired
+  config: PropTypes.object.isRequired
 };
 
 AppRoot.childContextTypes = {
@@ -83,4 +81,4 @@ AppRoot.childContextTypes = {
   contentHeight: PropTypes.number.isRequired
 };
 
-export default connect()(AppRoot);
+export default AppRoot;

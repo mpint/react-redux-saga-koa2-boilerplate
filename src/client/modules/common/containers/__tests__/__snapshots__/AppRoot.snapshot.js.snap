@@ -1,10 +1,29 @@
 exports[`AppRoot should render 1`] = `
 <div>
-  yoyo
-  <div>
-     
-     
+  <div
+    className="menu-container">
+    <ul>
+      <a
+        onClick={[Function]}
+        style={Object {}}>
+         
+        Main Page
+         
+      </a>
+      <span>
+        |
+      </span>
+      <a
+        onClick={[Function]}
+        style={Object {}}>
+         
+        Credits
+         
+      </a>
+    </ul>
   </div>
+  <div
+    className="grid-container" />
   <div
     style={
       Object {
@@ -16,8 +35,8 @@ exports[`AppRoot should render 1`] = `
         "zIndex": 1500,
       }
     }>
-    ver. 0.5.0
-     (8658096)
+    ver. 0.0.0
+     (1e52d27)
   </div>
 </div>
 `;
