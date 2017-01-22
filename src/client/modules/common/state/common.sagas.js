@@ -1,5 +1,5 @@
 import { put, call, take, fork } from 'redux-saga/effects';
-import { actions, APP_LOADED_SAGA } from './common.ducks';
+import { actions, APP_LOADED_SAGA, INCREMENT_COUNTER_SAGA } from './common.ducks';
 import { getApiStatus } from '../promises';
 
 export function* emitAppLoaded() {
@@ -20,7 +20,16 @@ export function* watchAppLoadedSaga() {
 	}
 }
 
+export function* watchIncrementCounterSaga() {
+	while(true) {
+		yield take(INCREMENT_COUNTER_SAGA);
+
+		yield put(actions.incrementCounter());
+	}
+}
+
 export default [
+	emitAppLoaded(),
   watchAppLoadedSaga(),
-	emitAppLoaded()
+	watchIncrementCounterSaga()
 ];

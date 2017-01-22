@@ -8,12 +8,23 @@ import { commonModel as initial } from '~/config/initialState';
  export const API_STATUS_REQUEST = 'COMMON/API_STATUS_REQUEST';
  export const API_STATUS_SUCCESS = 'COMMON/API_STATUS_SUCCESS';
  export const API_STATUS_ERROR = 'COMMON/API_STATUS_ERROR';
+
+ export const INCREMENT_COUNTER_SAGA = 'COMMON/INCREMENT_COUNTER_SAGA';
+ export const INCREMENT_COUNTER = 'COMMON/INCREMENT_COUNTER';
 /*
   action creators
  */
 export const actions = {
 	appLoaded: () => {
 		return { type: APP_LOADED_SAGA };
+	},
+
+  incrementCounterSaga: () => {
+		return { type: INCREMENT_COUNTER_SAGA };
+	},
+
+  incrementCounter: () => {
+		return { type: INCREMENT_COUNTER };
 	},
 
 	apiStatusRequest: () => {
@@ -62,6 +73,13 @@ export default function commonAppState(state = initial, action) {
 						value: false
 				}
 		  };
+
+    case INCREMENT_COUNTER:
+		  return {
+		    ...state,
+				counter: ++state.counter
+		  };
+
 		default:
 			return state;
 	}

@@ -5,6 +5,7 @@ export const statusProps = {
 };
 
 export const commonModel = {
+  counter: Number(),
   isApiResponding: {
     ...statusProps,
     value: Boolean()
