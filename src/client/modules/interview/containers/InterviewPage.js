@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 import { actions } from '~/modules/interview/state/interview.ducks';
 import TodoList from '~/modules/interview/components/TodoList';
 
-import { textCenterStyle, uppercaseStyle } from '~/styles/inline';
+import { textCenterStyle } from '~/styles/inline';
 
 class InterviewPage extends Component {
   constructor(props, context) {
@@ -17,7 +17,7 @@ class InterviewPage extends Component {
     const verticalCenterStyle = { marginTop: this.context.viewportHeight / 2 };
 
     return (
-      <div>
+      <div style={ { ...verticalCenterStyle, ...textCenterStyle } }>
         <TodoList
           onAddClick={ this.props.actions.addTodoSaga }
           onDeleteClick={ this.props.actions.deleteTodoSaga }
