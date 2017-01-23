@@ -28,6 +28,12 @@ describe('Common sagas', () => {
       expect(
         nextValue(saga)
       ).toEqual(
+        put(actions.apiStatusRequest())
+      );
+
+      expect(
+        nextValue(saga)
+      ).toEqual(
         call(getApiStatus)
       );
 
