@@ -31,7 +31,7 @@ export function* watchIncrementCounterSaga() {
 }
 
 export default [
-  watchAppLoadedSaga(),
+	watchAppLoadedSaga(),
 	watchIncrementCounterSaga(),
 	emitAppLoaded()
 ];

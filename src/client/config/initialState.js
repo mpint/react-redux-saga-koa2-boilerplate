@@ -11,3 +11,7 @@ export const commonModel = {
     value: Boolean()
   }
 };
+
+export const interviewModel = {
+  todoList: Array()
+};

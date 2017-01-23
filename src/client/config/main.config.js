@@ -1,11 +1,11 @@
 export default {
   pages: {
     main: {
-      title: 'Landing Page',
+      title: 'Home',
       slug: '/'
     },
     interview: {
-      title: 'Interview Page',
+      title: 'Interview',
       slug: '/interview'
     },
     credits: {

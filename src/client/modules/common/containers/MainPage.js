@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 import { actions } from '~/modules/common/state/common.ducks';
 import { textCenterStyle } from '~/styles/inline';
 
-import FlatButton from 'material-ui/FlatButton'
+import RaisedButton from 'material-ui/RaisedButton'
 import TextComponent from '~/modules/common/components/TextComponent';
 
 class MainPage extends Component {
@@ -13,7 +13,8 @@ class MainPage extends Component {
   }
 
   render () {
-    const verticalCenterStyle = { marginTop: this.context.viewportHeight / 2 };
+    const CONTENT_VERTICAL_OFFSET = 100
+    const verticalCenterStyle = { marginTop: this.context.viewportHeight / 2 - CONTENT_VERTICAL_OFFSET };
     const { config } = this.context;
 
     return (
@@ -26,10 +27,13 @@ class MainPage extends Component {
 
         <br/>
 
-        <TextComponent
-          content={ this.props.commonState.counter } />
+        <h2>
+          { this.props.commonState.counter }
+        </h2>
 
-        <FlatButton
+        <br/>
+
+        <RaisedButton
           onClick={ this.props.actions.incrementCounterSaga }
           label={ 'go up' } />
       </div>

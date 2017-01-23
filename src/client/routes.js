@@ -1,10 +1,12 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
+
 import AppRoot from '~/modules/common/containers/AppRoot';
 import Main from '~/modules/common/containers/MainPage';
 import CreditsPage from '~/modules/common/containers/CreditsPage';
-import InterviewPage from '~/modules/common/containers/InterviewPage';
 import NotFoundPage from '~/modules/common/containers/NotFoundPage';
+
+import InterviewPage from '~/modules/interview/containers/InterviewPage';
 
 import injectConfiguration from '~/modules/common/containers/injectConfig';
 
