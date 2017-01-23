@@ -3,7 +3,6 @@ import { actions, ADD_TODO_SAGA, DELETE_TODO_SAGA } from './interview.ducks';
 
 import { getLocalStorageItem, setLocalStorageItem } from '~/modules/common/state/localStorage';
 
-
 export function* watchAddTodoSaga() {
 	while(true) {
 		const { content } = yield take(ADD_TODO_SAGA);
