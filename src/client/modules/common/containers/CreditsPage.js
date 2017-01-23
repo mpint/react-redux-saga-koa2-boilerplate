@@ -1,6 +1,5 @@
 import React, { PropTypes, Component } from 'react';
 
-import GavelIcon from 'material-ui/svg-icons/action/gavel';
 import GithubIcon from 'material-ui/svg-icons/action/gavel';
 import TextComponent from '~/modules/common/components/TextComponent';
 
@@ -16,8 +15,6 @@ class CreditsPage extends Component {
 
     const { config } = this.context;
     const verticalCenterStyle = { marginTop: this.context.viewportHeight / 2 - CONTENT_VERTICAL_OFFSET };
-
-    const BrownGavel = <GavelIcon color={ 'brown' }/>;
 
     return (
       <div style={ { ...verticalCenterStyle, ...textCenterStyle } }>
@@ -39,19 +36,6 @@ class CreditsPage extends Component {
 
         <TextComponent
           content={ 'And a bunch of other stuff in package.json' } />
-
-        <br />
-
-        <TextComponent
-          content={ 'And as usual...' } />
-
-        <br />
-
-        <TextComponent
-          content={ BrownGavel } />
-        <TextComponent
-          style={ { ...uppercaseStyle, color: 'brown' } }
-          content={ 'Great justice' } />
 
         <br />
 
