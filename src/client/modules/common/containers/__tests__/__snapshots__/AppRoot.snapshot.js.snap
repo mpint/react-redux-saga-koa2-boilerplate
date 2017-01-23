@@ -7,7 +7,17 @@ exports[`AppRoot should render 1`] = `
         onClick={[Function]}
         style={Object {}}>
          
-        Main Page
+        Home
+         
+      </a>
+      <span>
+        |
+      </span>
+      <a
+        onClick={[Function]}
+        style={Object {}}>
+         
+        Interview
          
       </a>
       <span>
@@ -36,7 +46,7 @@ exports[`AppRoot should render 1`] = `
       }
     }>
     ver. 0.0.0
-     (127fbdb)
+     (c8d512b)
   </div>
 </div>
 `;
