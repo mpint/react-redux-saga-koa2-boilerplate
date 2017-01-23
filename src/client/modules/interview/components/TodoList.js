@@ -4,6 +4,8 @@ import { isEmpty } from 'lodash';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 
+import RemoveIcon from 'material-ui/svg-icons/content/remove-circle';
+
 class TodoList extends Component {
   constructor() {
     super();
@@ -37,19 +39,18 @@ class TodoList extends Component {
     return (
       <div>
         <RaisedButton
+          style={ { marginRight: 10 } }
           label={'add'}
           disabled={ !this.state.content }
           onClick={ this.addTodo }/>
 
-        <div>
           <TextField
             name="todoContent"
             value={ this.state.content }
             placeholder="add a todo here"
             onChange={ this.updateContent }/>
-        </div>
 
-        <div>
+        <div style={ { marginTop: 40 }}>
           { isEmpty(this.props.content) ?
             noTodosMessage :
             <ol>
@@ -58,7 +59,7 @@ class TodoList extends Component {
                   <span
                     style={{ marginRight: 10, color: 'yellow'}}
                     onClick={ this.deleteTodo.bind(undefined, index)}>
-                      DELETE
+                      <RemoveIcon />
                   </span>
                   <span>{ todo }</span>
                 </li>

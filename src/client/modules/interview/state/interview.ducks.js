@@ -10,6 +10,8 @@ import { interviewModel as initial } from '~/config/initialState';
  export const DELETE_TODO_SAGA = 'INTERVIEW/DELETE_TODO_SAGA';
  export const DELETE_TODO = 'INTERVIEW/DELETE_TODO';
 
+ export const LOAD_TODOS = 'INTERVIEW/LOAD_TODOS';
+
 /*
   action creators
  */
@@ -28,6 +30,10 @@ export const actions = {
 
 	deleteTodo: (todoIndex) => {
 		return { type: DELETE_TODO, todoIndex };
+	},
+
+	loadTodos: (todoList) => {
+		return { type: LOAD_TODOS, todoList };
 	}
 };
 
@@ -44,7 +50,14 @@ export default function interviewAppState(state = initial, action) {
 		    ...state,
         todoList: [
           ...state.todoList.slice(0, action.todoIndex),
-          ...state.todoList.slice(action.todoIndex + 1),
+          ...state.todoList.slice(action.todoIndex + 1)
+        ]
+		  };
+		case LOAD_TODOS:
+		  return {
+		    ...state,
+        todoList: [
+          ...action.todoList
         ]
 		  };
 
