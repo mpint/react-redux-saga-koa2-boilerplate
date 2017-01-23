@@ -11,6 +11,8 @@ export function* watchAppLoadedSaga() {
 		try {
 			yield take(APP_LOADED_SAGA);
 
+			yield put(actions.apiStatusRequest());
+
 			yield call(getApiStatus);
 
 			yield put(actions.apiStatusSuccess());
@@ -29,7 +31,7 @@ export function* watchIncrementCounterSaga() {
 }
 
 export default [
-	emitAppLoaded(),
   watchAppLoadedSaga(),
-	watchIncrementCounterSaga()
+	watchIncrementCounterSaga(),
+	emitAppLoaded()
 ];
