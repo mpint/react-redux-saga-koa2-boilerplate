@@ -1,1 +1,1 @@
-module.exports = { commit: "c8d512bc3d173a21ee306d1d27ccb66cf6098312", version: "0.0.0" };
+module.exports = { commit: "8f32ee411aafb2313e135b1ad7efdf5fe4f8b38e", version: "0.0.0" };

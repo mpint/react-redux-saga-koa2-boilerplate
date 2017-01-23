@@ -11,7 +11,7 @@ export function* watchAddTodoSaga() {
 		const list = yield getLocalStorageItem('todo-list');
 
 		yield setLocalStorageItem('todo-list', [
-			...list,
+			...(list || []),
 			content
 		]);
 
