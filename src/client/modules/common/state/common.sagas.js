@@ -27,7 +27,7 @@ export function* watchAppLoadedSaga() {
 		const storedList = yield getLocalStorageItem('todo-list');
 
 		yield put(interviewActions.loadTodos(
-			storedList
+			(storedList || [])
 		));
 	}
 }
